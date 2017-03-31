@@ -5,7 +5,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 24,
 
     // font family with optional fallbacks
     fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -97,6 +97,10 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    hyperBorder: {
+      borderWidth: '8px',
+      animate: true
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -106,7 +110,11 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [ 'hypercwd',
-      	     'an-old-hype'],
+      	     'an-old-hype',
+             'hyper-statusline',
+             'hyper-pane',
+             'hyperborder'
+  ],
 
 
   // // Customize the theme 
