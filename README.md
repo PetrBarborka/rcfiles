@@ -1,4 +1,4 @@
-#Config files for my favorite tools
+# Config files for my favorite tools
 
 Unix:
   ./unixlinkhyper.sh for Hyper.js
