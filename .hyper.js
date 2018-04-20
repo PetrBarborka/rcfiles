@@ -98,8 +98,8 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
     hyperBorder: {
-      borderWidth: '8px',
-      animate: true
+      borderWidth: '6px',
+      // animate: true
     }
   },
 
@@ -113,17 +113,18 @@ module.exports = {
       	     'an-old-hype',
              'hyper-statusline',
              'hyper-pane',
-             'hyperborder'
+             'hyperborder',
+           //  'hyperpower',
   ],
 
 
-  // // Customize the theme 
+  // // Customize the theme
   // themeSettings: {
-  //     // Do not make background transparent (default is 0.9) 
+  //     // Do not make background transparent (default is 0.9)
   //     opacity: 1,
-  //     // Switch from luke's orange uniform to master yoda (check the available styles above) 
+  //     // Switch from luke's orange uniform to master yoda (check the available styles above)
   //     style: 'yoda',
-  //     // Change the character that mars a tab active 
+  //     // Change the character that mars a tab active
   //     tabActiveMarker: '💁'
   // },
 
