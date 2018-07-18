@@ -117,6 +117,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+
 " Make it obvious where 140 characters is
 set textwidth=140
 set colorcolumn=+1
@@ -170,6 +171,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+:command! VisualBlock execute "normal! \<C-v>"
+
+map <C-q> :w<CR>
+
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
@@ -200,7 +205,15 @@ set exrc
 " Restrict local .vimrc to safe mappings
 set secure
 
-set clipboard=unnamed
+set clipboard=+
+
+set foldmethod=syntax
 
 map <F2> :.w !pbcopy<CR><CR>
 map <F3> :r !pbpaste<CR>
+
+map <F8> :CtrlPTag<CR>
+map <F11>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR>/^<CR><F12>
+map <F12>  :so tags.vim<CR>
+
+colorscheme rave80_colors
